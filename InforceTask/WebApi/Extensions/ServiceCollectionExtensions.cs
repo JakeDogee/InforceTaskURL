@@ -14,9 +14,9 @@ public class ServiceCollectionExtensions
         {
             options.SwaggerDoc("v1", new OpenApiInfo
             {
-                Title = "CSV Reader API",
+                Title = "API",
                 Version = "v1",
-                Description = "This API is for reading and editing csv files"
+                Description = ""
             });
         });
 
