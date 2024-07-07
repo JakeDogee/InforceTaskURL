@@ -1,0 +1,17 @@
+@model InforceTask.Application.Models.AboutContent
+
+@{
+    ViewData["Title"] = "About";
+}
+
+<h1>About</h1>
+
+<p>@Model?.Description</p>
+
+@if (User.IsInRole("Admin"))
+{
+    <form asp-action="EditAbout" method="post">
+        <textarea name="description">@Model?.Description</textarea>
+        <button type="submit">Save</button>
+    </form>
+}
